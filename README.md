@@ -1,3 +1,7 @@
+## Demo
+
+https://diogoramoslopes.github.io/sorting-visualizer/
+
 # Sorting Visualizer
 
 Visualizador interativo de algoritmos de ordenacao em JavaScript puro, usando ES Modules. Sem frameworks e sem dependencias.

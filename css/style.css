@@ -1,0 +1,101 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #010510;
+  --surface: #242d3b;
+  --surface-hover: #4c5b6f;
+  --text: #f4f8ff;
+  --muted: #94a3b8;
+  --primary: #38bdf8;
+  --compare: #ffcd07;
+  --swap: #de1d1d;
+  --sorted: #22c55e;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header { text-align: center; }
+
+h1 { font-size: 1.6rem; margin-bottom: 4px; }
+
+.subtitle { color: var(--muted); font-size: .9rem; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: .9rem;
+  transition: background .2s, transform .1s;
+}
+
+.btn:hover:not(:disabled) { background: var(--surface-hover); }
+.btn:active:not(:disabled) { transform: scale(.97); }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+.btn-secondary { background: var(--primary); color: #0f172a; }
+.btn-secondary:hover { background: #0b7cb0; }
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+#timer { font-variant-numeric: tabular-nums; color: var(--primary); }
+
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  height: 420px;
+  padding: 16px;
+  background: var(--surface);
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bar {
+  flex: 1;
+  max-width: 26px;
+  background: var(--primary);
+  border-radius: 4px 4px 0 0;
+  transition: height .08s linear, background .08s linear;
+}
+
+.bar.comparing { background: var(--compare); }
+.bar.swapping  { background: var(--swap); }
+.bar.sorted    { background: var(--sorted); }
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: .8rem;
+  margin-top: auto;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sorting Visualizer</h1>
+    <p class="subtitle">Visualize algoritmos de ordenacao em tempo real</p>
+  </header>
+
+  <section class="controls">
+    <button id="btn-novo" class="btn btn-secondary">Novo Array</button>
+    <button id="btn-bubble" class="btn">Bubble Sort</button>
+    <button id="btn-selection" class="btn">Selection Sort</button>
+    <button id="btn-insertion" class="btn">Insertion Sort</button>
+    <button id="btn-quick" class="btn">Quick Sort</button>
+    <button id="btn-merge" class="btn">Merge Sort</button>
+  </section>
+
+  <section class="info">
+    <span id="status">Escolha um algoritmo para comecar.</span>
+    <span id="timer">0 ms</span>
+  </section>
+
+  <main id="container" class="container"></main>
+
+  <footer>
+    <p>JavaScript puro</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
